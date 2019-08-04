@@ -1,0 +1,149 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Misaka-L 的小站</title>
+    <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+    <script>
+        fetch('https://v1.hitokoto.cn')
+            .then(function (res){
+                return res.json();
+            })
+            .then(function (data) {
+                var hitokoto = document.getElementById('hitokoto');
+                hitokoto.innerText = data.hitokoto+" ——"+data.from;
+            })
+            .catch(function (err) {
+                console.error(err);
+            })
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /* 导航条 */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* 导航条链接 */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* 链接颜色修改 */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* 创建两列 */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        /* 右侧栏 */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+
+        /* 图像部分 */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* 文章卡片效果 */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* 列后面清除浮动 */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* 底部 */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        /* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        /* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+        @media screen and (max-width: 400px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        .lk {
+            text-decoration:none;
+            color:black;
+        }
+    </style>
+</head>
+<body>
+<div class="topnav">
+    <a href="/" style="font-size: 18px">HYCDGX</a>
+    <a href="/">首页</a>
+    <a href="files">文件站</a>
+</div>
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <h2>博客搭建完成!</h2>
+            <h5>2019 年 7 月 20日 17:14</h5>
+            <p>博客搭建完成!使用手写 Html 完成</p>
+        </div>
+    </div>
+    <div class="rightcolumn">
+        <div class="card">
+            <img height=250px width=250px src="https://s2.ax1x.com/2019/06/12/VRLIIg.jpg">
+            <h3>Misaka-L</h3>
+            <h5>联系我</h5>
+            <a class="lk" target="_blank" href="https://space.bilibili.com/64514574">📺BiliBili</a>
+            <br>
+            <a class="lk" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2327533264&site=qq&menu=yes">🐧QQ</a>
+            <p></p>
+        </div>
+        <div class="card">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=450 src="//music.163.com/outchain/player?type=0&id=2099843212&auto=1&height=430"></iframe>
+        </div>
+    </div>
+</div>
+</body>
+</html>
