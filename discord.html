@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>hhh</title>
+    <meta name="theme-color" content="#212121">
     <style type="text/css">
         * {
             box-sizing: border-box;
@@ -85,13 +86,17 @@
             }
         }
         #back {
-            disblay:block;
-            text-decorcation:none;
             border-radius:4px;
             background-color:#BDBDBD;
             color:#424242;
         }
     </style>
+    <script type="text/javascript">
+        var back = document.getElementById("back");
+        back.onclick = function() {
+            window.open("https://lipww1234.github.io/HYCDGX");
+        }
+    </script>
 </head>
 <body>
     <div class="topnav">
@@ -103,7 +108,7 @@
         <div class="card">
             <h2>我费尽心思还是登不上 Discord ，所以没有加群链接。</h2>
             <p>请自行找服主</p>
-            <a href="index.html" id="back">返回主页</a>
+            <p id="back">返回主页</p>
         </div>
     </div>
     <div class="footer">
