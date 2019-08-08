@@ -1,0 +1,69 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HYCDGX 第三方网站</title>
+    <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+    <link href="../hycdgx.png" rel="icon">
+    <meta name="keyword" content="HYCDGX 服务器第三方网站">
+    <meta name="theme-color" content="#212121">
+    <script>
+        fetch('https://v1.hitokoto.cn')
+            .then(function (res){
+                return res.json();
+            })
+            .then(function (data) {
+                var hitokoto = document.getElementById('hitokoto');
+                hitokoto.innerText = data.hitokoto+" ——"+data.from;
+            })
+            .catch(function (err) {
+                console.error(err);
+            })
+    </script>
+    <!--  Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145294197-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-145294197-1');
+    </script>
+    <link rel="stylesheet" type="text/css" href="../CSS/page.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<div class="topnav">
+    <a href="../index.html" style="font-size: 18px">HYCDGX</a>
+    <a href="../index.html">首页</a>
+    <a href="https://lipww1234.github.io/HYCDGX-WIKI/index.html" style="font-size: 18px;">Wiki</a>
+    <a href="../Photo/index.html">截图</a>
+</div>
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <h1>服务器已启用领地功能</h1>
+            <h5>2019 年 8 月 4 日 22:08</h5>
+            <p>服务器已关闭白名单,转用领地系统.详细情况请看 <a href="https://lipww1234.github.io/HYCDGX-WIKI" class="cardA">Wiki</a></p>
+        </div>
+    </div>
+    <div class="rightcolumn">
+        <div class="card">
+            <h3>加入我们的玩家群组</h3>
+            <a href="https://jq.qq.com/?_wv=1027&k=5yDBVbk" class="lk" target="_blank">点击加入我们的 QQ 群:211405934</a><br/>
+            <a href="https://discord.gg/3rXnhbU" class="lk" target="_blank">点击加入我们的 Discord:</a>
+            <h3>加入服务器</h3>
+            <p>使用 Minecraft BE 1.12 添加并进入以下地址</p>
+            <p>地址:mc.hycdgx.com 端口:19132</p>
+        </div>
+        <div class="card">
+            <h2>一句话</h2>
+            <p id="hitokoto">获取中...:D</p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>网页制作:Misaka-L NriotHrreion 网页托管:GitHub</p>
+</div>
+</body>
+</html>
