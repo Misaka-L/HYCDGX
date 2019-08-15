@@ -20,6 +20,21 @@
             .catch(function (err) {
                 console.error(err);
             })
+        var reload = document.getElementById("reload");
+        reload.onclick = function() {
+	fetch('https://v1.hitokoto.cn')
+	    .then(function (res){
+            return res.json();
+        })
+        .then(function (data) {
+            var hitokoto = document.getElementById('hitokoto');
+            hitokoto.innerText = data.hitokoto+" ——"+data.from;
+        })
+        .catch(function (err) {
+            console.error(err);
+        })
+}
+        
     </script>
     <!--  Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145294197-1"></script>
@@ -32,6 +47,12 @@
     </script>
     <link rel="stylesheet" type="text/css" href="CSS/page.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <style type="text/css">
+        .reload {
+            color: #37474f;
+            font-size: 10pt;
+        }
+    </style>
 </head>
 <body>
 <div class="topnav">
@@ -63,7 +84,7 @@
             <p>地址:mc.hycdgx.com 端口:19132</p>
         </div>
         <div class="card">
-            <h2>一句话</h2>
+            <h2>一句话 <p id="reload">刷新</p></h2>
             <p id="hitokoto">获取中...:D</p>
         </div>
     </div>
