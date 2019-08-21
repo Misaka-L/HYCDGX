@@ -8,7 +8,8 @@
 ## 加入游戏
 + **IP地址:** mc.hycdgx.com
 + **端口:** 19132
-+ **快速打开游戏:** <a href="minecraft://" target="_blank">戳我</a>
++ **快速打开游戏:** 可在浏览器地址栏输入
+`javascript:window.open("minecraft://");`
 
 ## 游戏截图
 **来自zxwanghongyi** _2019.8.8 14:55_
