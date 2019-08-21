@@ -33,8 +33,10 @@
     </script>
     <!-- CopyIP -->
     <script type="text/javascript">
-        var ip = document.getElementById("ip");
-        ip.onclick = function() {
+        var copy = document.getElementById("copy");
+        ip.backgroundColor = document.getElementsByClassName("card").backgroundColor;
+        //ip.borderRadius = 4 +"px";
+        function copyip() {
             var copytxt = "mc.hycdgx.com";
             copytxt.Select();
             document.execCommand("Copy");
@@ -76,7 +78,7 @@
             <a href="https://discord.gg/3rXnhbU" class="lk" target="_blank">点击加入我们的 Discord:</a>
             <h3>加入服务器</h3>
             <p>使用 Minecraft BE 1.12 添加并进入以下地址</p>
-            <p id="ip">地址:mc.hycdgx.com 端口:19132</p>
+            <p id="ip">地址:mc.hycdgx.com 端口:19132 <input type="button" id="copy" onclick="copyip()" value="复制"></p>
             <b id="copied"></b>
         </div>
         <div class="card">
