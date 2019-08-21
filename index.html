@@ -8,7 +8,7 @@
     <meta name="keyword" content="HYCDGX 服务器第三方网站">
     <meta name="description" content="生存服 IP:mc.hycdgx.com 端口:19132 欢迎进入！ --lipww1234 NriotHrreion">
     <meta name="theme-color" content="#212121">
-    <script>
+    <script type="text/javascript">
         fetch('https://v1.hitokoto.cn')
             .then(function (res){
                 return res.json();
@@ -24,12 +24,22 @@
     </script>
     <!--  Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145294197-1"></script>
-    <script>
+    <script type="text/javascript">
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'UA-145294197-1');
+    </script>
+    <!-- CopyIP -->
+    <script type="text/javascript">
+        var ip = document.getElementById("ip");
+        ip.onclick = function() {
+            var copytxt = "mc.hycdgx.com";
+            copytxt.Select();
+            document.execCommand("Copy");
+            document.getElementById("Copied").innerHTML = "已复制";
+        }
     </script>
     <link rel="stylesheet" type="text/css" href="CSS/page.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -66,7 +76,8 @@
             <a href="https://discord.gg/3rXnhbU" class="lk" target="_blank">点击加入我们的 Discord:</a>
             <h3>加入服务器</h3>
             <p>使用 Minecraft BE 1.12 添加并进入以下地址</p>
-            <p>地址:mc.hycdgx.com 端口:19132</p>
+            <p id="ip">地址:mc.hycdgx.com 端口:19132</p>
+            <b id="copied"></b>
         </div>
         <div class="card">
             <h2>一句话</h2>
