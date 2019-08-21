@@ -34,11 +34,11 @@
     <!-- CopyIP -->
     <script type="text/javascript">
         var copy = document.getElementById("copy");
-        ip.backgroundColor = document.getElementsByClassName("card").backgroundColor;
-        //ip.borderRadius = 4 +"px";
+        copy.backgroundColor = document.getElementsByClassName("card").backgroundColor;
+        //copy.borderRadius = 4 +"px";
         function copyip() {
             var copytxt = "mc.hycdgx.com";
-            copytxt.Select();
+            copytxt.select();
             document.execCommand("Copy");
             document.getElementById("Copied").innerHTML = "已复制";
         }
