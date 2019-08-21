@@ -37,7 +37,7 @@
         copy.backgroundColor = document.getElementsByClassName("card").backgroundColor;
         //copy.borderRadius = 4 +"px";
         function copyip() {
-            var copytxt = "mc.hycdgx.com";
+            var copytxt = document.getElementById("ip");
             copytxt.select();
             document.execCommand("Copy");
             document.getElementById("Copied").innerHTML = "已复制";
@@ -78,7 +78,7 @@
             <a href="https://discord.gg/3rXnhbU" class="lk" target="_blank">点击加入我们的 Discord:</a>
             <h3>加入服务器</h3>
             <p>使用 Minecraft BE 1.12 添加并进入以下地址</p>
-            <p id="ip">地址:mc.hycdgx.com 端口:19132 <input type="button" id="copy" onclick="copyip()" value="复制"></p>
+            <p>地址:<p id="ip">mc.hycdgx.com</p> 端口:19132 <input type="button" id="copy" onclick="copyip()" value="复制"></p>
             <b id="copied"></b>
         </div>
         <div class="card">
