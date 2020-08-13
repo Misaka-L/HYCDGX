@@ -2,10 +2,13 @@
 # HYCDGX服务器
 ---
 
-## 官方网站
-[https://lipww1234.github.io/HYCDGX/](https://lipww1234.github.io/HYCDGX/) 官网
+## ~~官方网站~~
+~~[https://lipww1234.github.io/HYCDGX/](https://lipww1234.github.io/HYCDGX/) 官
 <br>
-[https://lipww1234.github.io/HYCDGX-WIKI/](https://lipww1234.github.io/HYCDGX-WIKI/) 官方WIKI
+[https://lipww1234.github.io/HYCDGX-WIKI/](https://lipww1234.github.io/HYCDGX-WIKI/) 官方WIKI~~
+## 网站已搬迁
+**非官方**  
+[新网址: https://hycdgx.misakal.xyz](https://hycdgx.misakal.xyz)
 
 ## 加入游戏
 + **IP地址:** mc.hycdgx.com
